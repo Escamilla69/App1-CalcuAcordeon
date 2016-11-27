@@ -1,76 +1,49 @@
 <html>
-    
     <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <link type="text/css" href="estilos.css" rel="stylesheet">
     </head>
-
-    
     <body>
-        <div class="pantalla">
-        <input type="text" placeholder="..." id="pantalla">
-    
-    
-        </div>
-    
-        
-        
-        
-        
-        
-    <div class="botones">
-        <button onclick="agregar('7')">7</button>
-        <button onclick="agregar('8')">8</button>
-        <button onclick="agregar('9')">9</button>
-        <button onclick="agregar('+')">+</button>
-        
-        
-        <button onclick="agregar('4')">4</button>
-        <button onclick="agregar('5')">5</button>
-        <button onclick="agregar('6')">6</button>
-        <button onclick="agregar('-')">-</button>
-        
-        
-        <button onclick="agregar('1')">1</button>
-        <button onclick="agregar('2')">2</button>
-        <button onclick="agregar('3')">3</button>
-        <button onclick="agregar('*')">*</button>
-        
-        <button class ="Control" onclick="borrar()">C</button>
-        <button onclick="agregar('0')">0</button>
-        <button onclick="agregar('.')">.</button>
-        <button class="control" onclick="igual()">=</button>
-        
-        
-        </div>
-        
-        
+        <h1>Registro</h1>
+    <div class="nombre">
+        <input type="text" placeholder="Tu nombre..." id="nombre">
         <script>
-            
-          function agregar(caracter){
-              document.getElementById('pantalla').value+=caracter;
-              
-          }
-            function borrar(){
-                document.getElementById('pantalla').value="";
-            }
-            
-            function igual (){
-                cadena = document.getElementById('pantalla').value;
-                if(cadena == '007'){
-                    
-                    window.location.assign('codigo.html');
-                }
-                total = eval(cadena);
-                document.getElementById('pantalla').value=total;
-            }
-        
-            
-            
+        function apiGuardarNombre(){
+            var nombre = document.getElementById('nombre').value;
+            //SETITEM coloca un elemento
+            localStorage.setItem('nombre', nombre);
+            //GETITEM obtiene un elemento guardado
+            console.log('Nombre guardado:' + localStorage.getItem('nombre'));
+        }
         </script>
-    
-    </body>
-
-
+        </div>    
+        <div class="correo">
+        <input type="text" placeholder="Tu correo..." id="correo">
+        <script>
+        function apiGuardarCorreo(){
+            var correo = document.getElementById('correo').value;
+            //SETITEM coloca un elemento
+            localStorage.setItem('correo', correo);
+            //GETITEM obtiene un elemento guardado
+            console.log('Correo guardado:' + localStorage.getItem('correo'));
+        }
+        </script>
+        </div>
+        <div class="password">
+        <input type="text" placeholder="Tu Password..." id="password">
+        <script>
+        function apiGuardarPassword(){
+            var password = document.getElementById('password').value;
+            //SETITEM coloca un elemento
+            localStorage.setItem('password', password);
+            //GETITEM obtiene un elemento guardado
+            console.log('Contraseña guardada:' + localStorage.getItem('password'));
+        }
+        </script>
+        </div>
+        <button onclick="apiGuardarNombre(); apiGuardarCorreo(); apiGuardarPassword();">Registrar Datos</button>
+        <button onclick="location.href='inicio.html'"> Iniciar</button>
+        <img src="sesion.png">
+        </body>
 </html>

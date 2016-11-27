@@ -1,21 +1,23 @@
 body{
-    background:-webkit-linear-gradient(blue, black);
+    background:-webkit-linear-gradient(green, orange);
     overflow: hidden;
     font-family: fantasy;
     
 }
 
 button{
-    background-color: aqua;
+    background-color: black;
     width: 50%;
     height: 8%;
-    margin-left: 13%;
+    margin-left: 25%;
     margin-right:25%;
-    font-family: sans-serif;
+    font-family: monospace;
     font-size: 1em;
-    color: black;
-    border-radius: 19px;
+    color: white;
+    border-radius: 10px;
     outline: none;
+    margin-top: 10%;
+    border: none;
 }
 
 .nombre{
@@ -44,16 +46,19 @@ input{
 
 h1{
     color: black;
-    font-family: monospace;
-    margin-left: 35%;
-    font-weight: bolder;
+   font-family: monospace;
+
+    margin-left: 17%;
+   font-weight: 100;
+    font-size: 2em;
     
 }
 
 img{
-    margin-left: 34%;
-    width: 110px;
-    height: 110px;
+    margin-top: 70px;
+    margin-left: 25%;
+    width: 170px;
+    height: 80px;
 }
 
 
@@ -106,5 +111,9 @@ img{
     border: none;
     
     
+}
+
+#primera{
+    background-color: white;
 }
 

@@ -1,0 +1,51 @@
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link type="text/css" href="estilos.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Inicio</h1> 
+    <div class="nombre">
+        <input type="text" placeholder="Tu nombre..." id="nombre2">
+        <script>
+        function apiGuardarNombre2(){
+            var nombre2 = document.getElementById('nombre2').value;
+            //SETITEM coloca un elemento
+            localStorage.setItem('nombre2', nombre2);
+            //GETITEM obtiene un elemento guardado
+            console.log('Nombre guardado:' + localStorage.getItem('nombre2'));
+        }       
+        </script>
+        </div>
+        <div class="password">
+        <input type="text" placeholder="Tu Password..." id="password2">
+        <script>
+        function apiGuardarPassword2(){
+            var password2 = document.getElementById('password2').value;
+            //SETITEM coloca un elemento
+            localStorage.setItem('password2', password2);
+            //GETITEM obtiene un elemento guardado
+            console.log('Password guardado:' + localStorage.getItem('password2'));
+        }
+        </script>
+        </div>
+        <button onclick="comparar()">Iniciar</button>
+        <button onclick="location.href='index.html'">Registro papu</button>
+        <img src="usuario.png">
+        </body>
+    <script>
+        function comparar(){
+            var nombre2 = document.getElementById('nombre2').value;
+            var password2 = document.getElementById('password2').value;
+            var nombre = localStorage.getItem('nombre');
+            var password = localStorage.getItem('password');
+            if (nombre2 == nombre && password2 == password){
+                window.location="principal.html";
+            }
+            else{
+                alert("Ingresa un nombre y contraseña correctos");
+            }
+        }
+    </script>
+</html>
